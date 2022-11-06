@@ -20,3 +20,19 @@ Will the last two lines compiled ?
 list2[2] = 'Dart'; this line will be compiled and executed, we can replace the 'flutter' with 'dart' string in list2  
 const list3= list1;  this line will not be compiled, will get a compile time error Const variables must be initialized with a constant value. that means we need to change the list1 to const, but if we do this list2 can not be modifed.
   
+ String  longOperationMethod(){
+    var counting =0;
+    for (var i=1;i<=1000000;i++){
+      counting = i;
+      print(i);
+    }
+     return '$counting! times i print the values';
+  }
+  
+Difference between Provider and Mobx, can we use both together and write code to demonstrate it 
+
+Using provider we can update the specific widget in the widget tree using the consumer widget, we can access the provider value at any place in the app, if we add our provider in the root of the tree 
+Mobx uses obesrver and obeservale patteren 
+  
+  
+  
