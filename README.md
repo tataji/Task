@@ -22,12 +22,26 @@ const list3= list1;  this line will not be compiled, will get a compile time err
   
  String  longOperationMethod(){
     var counting =0;
-    for (var i=1;i<=1000000;i++){
+    for (var i=1;i<=1000000000;i++){
       counting = i;
       print(i);
     }
      return '$counting! times i print the values';
   }
+  
+  Fix for above block is the following 
+   Future<String>  longOperationMethod() async{
+    var counting =0;
+    for (var i=1;i <= 1000000000; i++){
+      counting = i;
+    }
+     return '$counting! times i print the values';
+  }
+  longOperationMethod().then((val){
+    print(val);
+  });
+  
+  and result would be 1000000000! times i print the values
   
 Difference between Provider and Mobx, can we use both together and write code to demonstrate it 
 
