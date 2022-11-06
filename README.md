@@ -11,3 +11,12 @@ we can access the plartform specifc code using the method channel and event chan
 What is BuildCOntext? and its imprortance 
 
 Build context is to identify the widget location and position in the widget tree, so that we can update the data of a widget, and also we can create global singleton class and pass the context to that class and get the configuration we need in every where in the app
+
+var list1 =['I','@','flutter'];
+final list2 = list1;
+list2[2] = 'Dart';
+const list3= list1;
+Will the last two lines compiled ?
+list2[2] = 'Dart'; this line will be compiled and executed, we can replace the 'flutter' with 'dart' string in list2  
+const list3= list1;  this line will not be compiled, will get a compile time error Const variables must be initialized with a constant value. that means we need to change the list1 to const, but if we do this list2 can not be modifed.
+  
